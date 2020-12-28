@@ -49,8 +49,9 @@ class GooglePage{
     }
 
    MainPageAssertion()
-   {   
-       expect(this.SearchField).toBeDisplayed()
+   {   //browser.pause(5000)
+       this.SearchField.waitForExist(5000)
+       expect(this.SearchField).toBeVisible(20000)
        
    }
 
@@ -90,6 +91,7 @@ class GooglePage{
 
     clickFirstResult()
     {
+        this.ContentSearched.waitForDisplayed()
         this.ContentSearched.click()
         expect(this.ResultPagelogo).not.toBeDisplayed()
     }
