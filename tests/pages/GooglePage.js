@@ -49,7 +49,7 @@ class GooglePage{
     }
 
    MainPageAssertion()
-   {   //browser.pause(5000)
+   {   
        this.SearchField.waitForExist(5000)
        expect(this.SearchField).toBeVisible(20000)
        
@@ -78,10 +78,10 @@ class GooglePage{
         this.GoogleSearchButton.click() 
     }
 
-    SearchAssertion()
+    SearchAssertion(valuetext)
     {
         this.ContentSearched.waitForDisplayed(20000)
-        expect(this.ContentSearched).toHaveText('El nombre del viento - Wikipedia, la enciclopedia libre')
+        expect(this.ContentSearched).toHaveText(valuetext)
     }
 
     ResultPageAssertion()
@@ -96,11 +96,11 @@ class GooglePage{
         expect(this.ResultPagelogo).not.toBeDisplayed()
     }
 
-    ResultValidation()
+    ResultValidation(textvalue,textvalue2)
     {
         expect(this.WikiLogo).toBeDisplayed()
-        expect(this.WikiTitle).toHaveText('El nombre del viento')
-        expect(browser).toHaveUrl('https://es.wikipedia.org/wiki/El_nombre_del_viento')
+        expect(this.WikiTitle).toHaveText(textvalue)
+        expect(browser).toHaveUrl(textvalue2)
     }
 
 

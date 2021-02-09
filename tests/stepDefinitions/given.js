@@ -12,5 +12,4 @@ const{
 
 Given(/^I’m on the homepage$/, function(){
     GoogleSearch.MainPageAssertion()
-    //browser.debug()
 })

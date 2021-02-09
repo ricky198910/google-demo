@@ -11,5 +11,5 @@ Then(/^I go to the search results page$/, function(){
 })
 
 Then(/^I go to the “Patrick Rothfuss - The Books” page$/, function(){
-    GoogleSearch.ResultValidation()
+    GoogleSearch.ResultValidation('El nombre del viento','https://es.wikipedia.org/wiki/El_nombre_del_viento')
 })
